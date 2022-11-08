@@ -24,9 +24,19 @@ export default function Header({}: Props) {
     }}
      className="flex flex-row items-center">
       {/* Social Icons */}   
+      <Link href="#hero">
+      <motion.img
+    whileHover={{scale:2.2}}
+    transition={{duration:1.2}}
+    viewport={{once:true}}
+      className="h-10 w-10 rounded-full filter grayscale md:hover:grayscale-0 cursor-pointer"
+          src="https://i.imgur.com/35trhFu.jpeg" alt="" title="Home"/>
+        </Link>
+
       <SocialIcon url="https://www.linkedin.com/in/charanjagwani/"
       fgColor='gray'
       bgColor='transparent'/>
+
 
 <SocialIcon url="https://www.github.com/charjags/"
       fgColor='gray'

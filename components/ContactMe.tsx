@@ -29,30 +29,30 @@ function ContactMe({}: Props) {
             Contact
         </h3>
 
-        <div className="flex flex-col md:space-y-10 space-y-8">
-            <h4 className="md:text-4xl text-2xl font-semibold text-center pt-[8rem]">
+        <div className="flex flex-col md:space-y-10 space-y-12">
+            <h4 className=" text-[#ccd6f6] md:text-4xl text-lg font-semibold text-center md:pt-[4rem] pt-[7rem] mb-[-1rem]">
                 I have got just what you need. {" "} <br />
-                <span className="decoration-[#64ffda]/50 underline">Lets Talk.</span>
+                <span className="decoration-[#64ffda]/50 underline">Lets Talk</span>.
             </h4>
         
 
-            <div className="space-y-10">
+            <div className="space-y-4 md:space-y-8 md:pt-10 text-[#ccd6f6] ">
                 <div className="flex items-center space-x-2 md:space-x-5 justify-center ">
                     <PhoneIcon className="text-[#64ffda] md:h-7 md:w-7 h-6 w-6 animate-pulse" />
-                    <p className="text-xl md:text-2xl ">+19726791407</p>
+                    <p className="text-lg md:text-2xl ">+19726791407</p>
                 </div>
                 <div className="flex items-center space-x-2 md:space-x-5 justify-center">
                     <   EnvelopeIcon className="text-[#64ffda] md:h-7 md:w-7 h-6 w-6 animate-pulse" />
-                    <p className="text-xl md:text-2xl ">charanjagwani@live.com</p>
+                    <p className="text-lg md:text-2xl ">charanjagwani@live.com</p>
                 </div>
                 <div className="flex items-center space-x-2 md:space-x-5 justify-center">
                     <MapPinIcon className="text-[#64ffda] md:h-7 md:w-7 h-6 w-6 animate-pulse" />
-                    <p className="text-xl md:text-2xl ">Houston, Texas</p>
+                    <p className="text-lg md:text-2xl">Houston, Texas</p>
                 </div>
             </div>
             <form
              onSubmit={handleSubmit(onSubmit)}
-            className="flex flex-col space-y-2 md:w-fit mx-auto w-[20rem]"
+            className="flex flex-col pb-20 md:pb-0 space-y-2 md:w-fit mx-auto w-[20rem]"
             >
                 <div className="sm:flex space-y-2 md:space-x-2 md:space-y-0" >
                     <input

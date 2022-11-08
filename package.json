@@ -13,7 +13,7 @@
     "@portabletext/react": "^1.0.6",
     "@sanity/cli": "^2.35.0",
     "@sanity/image-url": "^1.0.1",
-    "framer-motion": "^7.6.1",
+    "framer-motion": "^7.6.4",
     "next": "12.3.1",
     "next-sanity": "^1.0.3",
     "react": "18.2.0",
@@ -23,7 +23,7 @@
     "react-social-icons": "^5.15.0"
   },
   "devDependencies": {
-    "@sanity/core": "^2.35.0",
+    "@sanity/core": "^0.139.3",
     "@types/node": "18.11.2",
     "@types/react": "18.0.21",
     "@types/react-dom": "18.0.6",
