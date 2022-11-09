@@ -1,5 +1,5 @@
 import React from 'react'
-import {motion} from "framer-motion"
+import { motion } from "framer-motion"
 import TypeScript from './Skill1'
 import Angular from './Skill2'
 import Node from './Skill3'
@@ -25,48 +25,47 @@ import Java from './Skill20'
 type Props = {}
 
 const Skills = (props: Props) => {
-  return (
-    <motion.div
-    initial={{opacity:0}}
-    whileInView={{opacity:1}}
-    transition={{duration:1.5}}
-    viewport={{once:true}}
-     className="h-screen flex md:relative flex-col text-center md:text-left text-2xl
-    xl:flex-row max-w-[2000px] xl:px-10 min-h-screen justify-center xl:space-y-0 mx-auto items-center">
-        <h3 className="  md:mt-0 md:absolute pl-5 top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
-            Skills
-        </h3>
-        <h3 className=" md:absolute top-36 uppercase tracking-[3px] text-gray-500 text-sm invisible md:visible  ">
-            Hover over a skill for currenct proficiency
-        </h3>
-        <h3 className=" md:absolute top-36 uppercase tracking-[3px] pb-6 mt-[-1rem] text-gray-500 text-sm  md:invisible">
-            Tap on skill for currenct proficiency (Check out the hover feature on a computer!)
-        </h3>
+    return (
+        <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 1.5 }}
+            viewport={{ once: true }}
+            className="min-h-screen flex md:relative flex-col text-center md:text-left text-2xl max-w-[2000px] xl:px-10 justify-center xl:space-y-0 mx-auto items-center pt-24">
+            <h3 className="md:mt-0 pl-5 uppercase tracking-[20px] text-gray-500 text-2xl">
+                Skills
+            </h3>
+            <p className="uppercase tracking-[3px] text-gray-500 text-sm invisible md:visible mb-10">
+                Hover over a skill for currenct proficiency
+            </p>
+            <p className="uppercase tracking-[3px] pb-6 mt-[-1rem] text-gray-500 text-sm md:invisible mb-10">
+                Tap on skill for currenct proficiency (Check out the hover feature on a computer!)
+            </p>
 
-        <div className="grid grid-cols-4 gap-t pt-15">
-            <TypeScript />
-            <Angular />
-            <Node />
-            <HTML />
-            <CSS />
-            <JS />
-            <AWS />
-            <SQL />
-            <GCP />
-            <Mongo />
-            <Python />
-            <Go />
-            <OpenCV />
-            <REACT />
-            <Next />
-            <Tailwind />
-            <Django />
-            <Solidity />
-            <Jquery />
-            <Java />
-        </div>
-    </motion.div>
-  )
+            <div className="grid grid-cols-4 gap-t pt-15">
+                <TypeScript />
+                <Angular />
+                <Node />
+                <HTML />
+                <CSS />
+                <JS />
+                <AWS />
+                <SQL />
+                <GCP />
+                <Mongo />
+                <Python />
+                <Go />
+                <OpenCV />
+                <REACT />
+                <Next />
+                <Tailwind />
+                <Django />
+                <Solidity />
+                <Jquery />
+                <Java />
+            </div>
+        </motion.div>
+    )
 }
 
 export default Skills
