@@ -22,7 +22,7 @@ type Props = {
 }
 const Home = ({ experiences, projects, skills, socials }: Props) => {
   return (
-    <div className="bg-[#0a192f] text-white h-screen  snap-y snap-proximity
+    <div className="bg-[#0a192f] text-white h-screen  snap-y snap-mandatory
      overflow-y-scroll overflow-x-hidden z-0 scrollbar-thin  scrollbar-thumb-[#a8b2d1]/40">
       <Head>
         <title>Charan Jagwani -- Portfolio</title>

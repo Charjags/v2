@@ -24,13 +24,13 @@ function ContactMe({ }: Props) {
     };
 
     return (
-        <div className="min-h-screen flex relative flex-col text-center md:text-left md:flex-row max-e-7xl px-10 pt-24 justify-evenly mx-auto items-center ">
+        <div className="h-screen flex relative flex-col text-center md:text-left md:flex-row max-e-7xl px-10 pt-24 justify-evenly mx-auto items-center ">
             <h3 className="pl-5 uppercase tracking-[20px] text-gray-500 text-2xl mb-10">
                 Contact
             </h3>
 
             <div className="flex flex-col md:space-y-10 space-y-12">
-                <h4 className=" text-[#ccd6f6] md:text-4xl text-lg font-semibold text-center md:pt-[4rem] mb-[-1rem]">
+                <h4 className=" text-[#ccd6f6] md:text-4xl text-lg font-semibold text-center md:pt-[1rem] mb-[-1rem]">
                     I have got just what you need. {" "} <br />
                     <span className="decoration-[#64ffda]/50 underline">Lets Talk</span>.
                 </h4>
