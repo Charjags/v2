@@ -8,12 +8,7 @@ type Props = {
 
 const Projects = ({ projects }: Props) => {
     return (
-        <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 1.5 }}
-            viewport={{ once: true }}
-            className="min-h-screen relative flex overflow-hidden flex-col text-left max-w-full justify-center mx-auto items-center z-0 pt-24">
+        <div className="min-h-screen relative flex overflow-hidden flex-col text-left max-w-full justify-center mx-auto items-center z-0 pt-24">
             <h3 className="pl-5 uppercase tracking-[20px] text-gray-500 text-2xl mb-10">Projects</h3>
 
             <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin
@@ -32,7 +27,6 @@ const Projects = ({ projects }: Props) => {
                                         y: -300,
                                         opacity: 0
                                     }}
-                                    whileHover={{ scale: 2.2, }}
                                     transition={{ duration: 1.2 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
@@ -71,7 +65,7 @@ const Projects = ({ projects }: Props) => {
 
             </div>
             <div className="w-full absolute top-[30%] bg-[#F7AB0A]/10 left-0 h-[500px] -skew-y-12" />
-        </motion.div>
+        </div>
 
     )
 }
