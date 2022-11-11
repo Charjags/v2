@@ -10,8 +10,8 @@ export default function About({ }: Props) {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 1.5 }}
-            className="flex flex-col items-center justify-center relative min-h-screen text-center md:text-left
-       max-w-7xl px-10 mx-auto pt-24">
+            className="flex flex-col items-center justify-center relative h-screen text-center md:text-left
+       max-w-7xl px-10 mx-auto py-24">
             <h3 className="mb-10 text-center uppercase tracking-[20px] text-gray-500 text-2xl">
                 About
             </h3>

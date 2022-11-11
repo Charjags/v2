@@ -13,50 +13,56 @@ const Projects = ({ projects }: Props) => {
             whileInView={{ opacity: 1 }}
             transition={{ duration: 1.5 }}
             viewport={{ once: true }}
-            className="h-screen relative flex overflow-hidden flex-col text-left max-w-full justify-center mx-auto items-center z-0 pt-24">
+            className="min-h-screen relative flex overflow-hidden flex-col text-left max-w-full justify-center mx-auto items-center z-0 pt-24">
             <h3 className="pl-5 uppercase tracking-[20px] text-gray-500 text-2xl mb-10">Projects</h3>
 
             <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin
         scrollbar-track-gray-400/20 scrollbar-thumb-[#a8b2d1]/40">
                 {projects?.map((project, i) => (
                     <div key={project._id}
-                        className="w-screen flex-shrink-0 snap-center flex flex-col space-y-2 itmes-center justify-start px-[3rem] md:px-44">
-                        <div className=' text-[#64ffda] pt-[-8rem] md:px-10 max-w-xl text-xs sm:pb-4 flex lg:pl-11 lg:mx-auto justify-center text-center invisible md:visible '>
-                            (Hover Over Image to Expand)
-                        </div>
+                        className="w-screen flex-shrink-0 snap-center flex flex-col space-y-2 itmes-center justify-center px-[3rem] md:px-44">
+                        <div className='md:flex md:flex-row'>
+                            <div className='flex-auto'>
+                                <div className=' text-[#64ffda] pt-[-8rem] md:px-10 max-w-xl text-xs sm:pb-4 flex lg:pl-11 lg:mx-auto justify-center text-center invisible md:visible '>
+                                    (Hover Over Image to Expand)
+                                </div>
 
-                        <motion.img
-                            initial={{
-                                y: -300,
-                                opacity: 0
-                            }}
-                            whileHover={{ scale: 2.2, }}
-                            transition={{ duration: 1.2 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            className="lg:h-72 lg:w-96 mx-auto mt-[-2rem] object-cover pt-[-3rem] "
-                            src={urlFor(project?.image).url()}
-                            alt=""
-                        />
-                        <div className='space-y-10 px-0 md:px-10 lg:max-w-xl text-xs sm:pb-4 md:text-base flex lg:pl-8 lg:mx-auto justify-center text-center lg:pb-4'><span className='text-[#64ffda]'>{project.linkToBuild}</span></div>
+                                <motion.img
+                                    initial={{
+                                        y: -300,
+                                        opacity: 0
+                                    }}
+                                    whileHover={{ scale: 2.2, }}
+                                    transition={{ duration: 1.2 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    className="lg:h-72 lg:w-96 mx-auto mt-[-2rem] object-cover pt-[-3rem] "
+                                    src={urlFor(project?.image).url()}
+                                    alt=""
+                                />
+                            </div>
+                            <div className='flex-auto'>
+                                <div className='space-y-10 px-0 md:px-10 lg:max-w-xl text-xs sm:pb-4 md:text-base lg:pl-10 lg:pb-4'><span className='text-[#64ffda]'>{project.linkToBuild}</span></div>
 
-                        <div className="space-y-10 px-0 md:px-10 max-w-xl flex-col flex lg:pl-8 lg:mx-auto">
-                            <h4 className="mb-[-20px] lg:text-xl md:text-2xl sm:text-xl font-semibold text-center">
-                                <span className="underline text-[#ccd6f6] decoration-[#64ffda]/50">Case Study {i + 1} of {projects.length}</span>:{" "} <span className='text-[#ccd6f6]'>{project?.title}</span>
-                            </h4>
+                                <div className="space-y-10 px-0 md:px-10 max-w-xl flex-col flex">
+                                    <h4 className="mb-[-20px] lg:text-xl md:text-2xl sm:text-xl font-semibold">
+                                        <span className="underline text-[#ccd6f6] decoration-[#64ffda]/50">Case Study {i + 1} of {projects.length}</span>:{" "} <span className='text-[#ccd6f6]'>{project?.title}</span>
+                                    </h4>
 
-                            <div className='flex items-center space-x-2 pb-3 justify-center'>
-                                {project?.technologies.map((technology) => (
-                                    <img
-                                        className='h-10 w-10'
-                                        key={technology._id}
-                                        src={urlFor(technology.image).url()}
-                                        alt=""
-                                    />
-                                ))}
+                                    <div className='flex items-start space-x-2 pb-3 justify-start'>
+                                        {project?.technologies.map((technology) => (
+                                            <img
+                                                className='h-10 w-10'
+                                                key={technology._id}
+                                                src={urlFor(technology.image).url()}
+                                                alt=""
+                                            />
+                                        ))}
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <p className="text-md text-[#a8b2d1] text-center md:text-left pb-[10.25rem] md:pb-0 sm:overflow-y-auto lg:overflow-visible sm:ml-5 lg:text-lg sm:text-md scrollbar-thin scrollbar-thumb-[#64ffda]/40 justify-center">
+                        <p className="m-auto py-6 text-md text-center text-[#a8b2d1] sm:overflow-y-auto lg:overflow-visible lg:text-lg sm:text-md scrollbar-thin scrollbar-thumb-[#64ffda]/40 justify-center max-w-5xl max-h-96">
                             {project?.summary}
                         </p>
                     </div>

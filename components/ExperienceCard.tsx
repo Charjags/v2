@@ -3,7 +3,7 @@ import { motion } from "framer-motion"
 type Props = {}
 
 export default function ExperienceCard({ }: Props) {
-    return <article className="flex flex-col rounded-lg md:mt-3 items-center space-y-7 flex-shrink-0 sm:w-[600px] xl:w-[900px] snap-center bg-[#292929] mb-9 p-3 pb-3 md:mb-5 md:p-3 md:pb-3 md:hover:opacity-100 md:opacity-40
+    return <article className="flex flex-col rounded-lg md:mt-3 items-center space-7 flex-shrink-0 sm:w-[600px] md:p-12 snap-center bg-[#292929] mb-9 p-3 pb-3 md:mb-5  md:hover:opacity-100 md:opacity-40
      transition-opacity duration-200 overflow-hidden">
         <motion.img
             initial={{
