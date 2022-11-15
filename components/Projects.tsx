@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from 'react'
 import { motion } from "framer-motion"
 import { Project } from "../typings";
@@ -24,13 +25,17 @@ const Projects = ({ projects }: Props) => {
 
                                 <motion.img
                                     initial={{
-                                        y: -300,
                                         opacity: 0
                                     }}
                                     transition={{ duration: 1.2 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
-                                    className="lg:h-72 lg:w-96 mx-auto mt-[-2rem] object-cover pt-[-3rem] "
+                                    className="lg:h-72 lg:w-96 mx-auto mt-[-2rem] object-cover pt-[-3rem] hidden md:block"
+                                    src={urlFor(project?.image).url()}
+                                    alt=""
+                                />
+                                <img
+                                    className="lg:h-72 lg:w-96 mx-auto mt-[-2rem] object-cover pt-[-3rem] md:hidden"
                                     src={urlFor(project?.image).url()}
                                     alt=""
                                 />
